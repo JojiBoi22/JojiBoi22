@@ -1,0 +1,11 @@
+-- Your DAG as a table
+CREATE TABLE dag_nodes (
+    node_id VARCHAR(50),
+    parent_id VARCHAR(50)  -- NULL for root nodes
+);
+
+-- Edges table (optional, derived from above)
+CREATE TABLE dag_edges (
+    from_node VARCHAR(50),
+    to_node VARCHAR(50)
+);

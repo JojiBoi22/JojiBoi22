@@ -1,0 +1,19 @@
+-- Check if subset S is a valid k-cluster
+WITH cluster_check AS (
+    SELECT 
+        s.node_id,
+        COUNT(anticone.node_id) as anticone_count
+    FROM subset_s s
+    CROSS JOIN (
+        -- anticone calculation for each node in S
+        SELECT DISTINCT a.node_id as anticone_node
+        FROM dag_nodes a
+        WHERE a.node_id NOT IN (ancestors_of_s_node)
+        AND a.node_id NOT IN (descendants_of_s_node)
+        AND a.node_id != s.node_id
+        AND a.node_id IN (SELECT node_id FROM subset_s)
+    ) anticone
+    GROUP BY s.node_id
+)
+SELECT * FROM cluster_check 
+WHERE anticone_count <= k;  -- Your k value

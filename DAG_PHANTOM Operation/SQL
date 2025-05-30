@@ -1,0 +1,24 @@
+-- Get anticone for a specific node
+WITH RECURSIVE 
+ancestors AS (
+    -- Direct parents
+    SELECT parent_id as node_id FROM dag_nodes WHERE node_id = 'B'
+    UNION
+    -- Recursive ancestors
+    SELECT d.parent_id FROM dag_nodes d 
+    JOIN ancestors a ON d.node_id = a.node_id
+    WHERE d.parent_id IS NOT NULL
+),
+descendants AS (
+    -- Direct children
+    SELECT node_id FROM dag_nodes WHERE parent_id = 'B'
+    UNION
+    -- Recursive descendants  
+    SELECT d.node_id FROM dag_nodes d
+    JOIN descendants desc ON d.parent_id = desc.node_id
+)
+SELECT node_id FROM dag_nodes
+WHERE node_id NOT IN (SELECT node_id FROM ancestors)
+AND node_id NOT IN (SELECT node_id FROM descendants)  
+AND node_id != 'B';
+
