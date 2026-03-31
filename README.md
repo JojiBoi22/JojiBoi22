@@ -1,5 +1,5 @@
 <p align="center">
-  [![Typing SVG]
+  <!-- Typing SVG by Jojiboi22 - https://github.com/Jojiboi22/readme-typing-svg -->
   <img src="https://readme-typing-svg.demolab.com/?lines=Full-(https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F7CD1A&multiline=true&width=435&lines=Jojiboi22;Junior+Data+Scientist+and+AI+Engineer)](https://git.io/typing-svg) /></a>
   </p>
 
