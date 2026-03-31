@@ -1,8 +1,9 @@
 <p align="center">
   <!-- Typing SVG by Jojiboi22 - https://github.com/Jojiboi22/readme-typing-svg -->
-  <img src="https://readme-typing-svg.demolab.com
-font=Fira+Code&pause=1000&color=F7CD1A&multiline=true&width=435&lines=Jojiboi22;Junior+Data+Scientist+and+AI+Engineer" alt="Typing SVG" /></a>
-  </p>
+  <a href= (https://readme-typing-svg.demolab.com/Jojiboi22>
+    <p align="center">
+      <img src=font=Fira+Code&pause=1000&color=F7CD1A&multiline=true&width=435&lines=Jojiboi22;Junior+Data+Scientist+and+AI+Engineer https://git.io/typing-svg/></a>
+  </p> 
 
 I started my software development journey after completing a short course on Blockchain Technology back in 2024. From then, my love for programming only starting growing. I have been building small projects from IoT self-hosting and security-ware to compiling cannisters on ICP and docker in order to run as background tasks while I work. 
 
